@@ -22,6 +22,8 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+
+
 /* ---------- Header ---------- */
 header {
     background-color: #ffffff;
@@ -32,6 +34,9 @@ header {
     /* when the position is made fixed, the width reverts to content width */
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 header a {
@@ -74,12 +79,22 @@ nav {
     box-shadow: 0 2px 2px #3a3a3a;
     display: none;
     /* this will make the navbar items hidden until the user clicks to open them */
+    top: 100%;
+    /* this tells the navigation element that the top of the element should start at the bottom of its parent. 0% would represent the top of the parent, and 100% represents the bottom of it */
 }
 
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
 
+#nav-toggle {
+    display:none;
+}
 
-
-
+.nav-toggle-label {
+    font-size: 2rem;
+}
 
 
 
@@ -90,7 +105,6 @@ main {
     /* this will make the main element take up any surplus space, and push footer down. 
     It should not shrink when the screen is too small to show all the content. */
 }
-
 
 
 
