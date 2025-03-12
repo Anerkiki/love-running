@@ -63,6 +63,26 @@ h1 {
     border-bottom: 1px solid #3a3a3a;
 }
 
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    /* takes an element out of the normal flow of the page structure, it is positioned relative to the nearest positioned ancestor, in this case the header */
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    /* this will make the navbar items hidden until the user clicks to open them */
+}
+
+
+
+
+
+
+
+
 /* ---------- Main content ---------- */
 main {
     background-color: lightblue;
@@ -70,6 +90,9 @@ main {
     /* this will make the main element take up any surplus space, and push footer down. 
     It should not shrink when the screen is too small to show all the content. */
 }
+
+
+
 
 /* ---------- Footer ---------- */
 footer {
