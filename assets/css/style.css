@@ -48,6 +48,21 @@ h1 {
     color: #252525;
 }
 
+#menu {
+    font-size: 110%;
+    /* font-size: 1.1rem;  ------ would this be the same? */
+    list-style-type: none;
+    letter-spacing: 4px;
+}
+
+#menu > li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
 /* ---------- Main content ---------- */
 main {
     background-color: lightblue;
