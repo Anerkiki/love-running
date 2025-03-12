@@ -116,7 +116,7 @@ footer {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-    /* Header */
+    /* ---------- Header ---------- */
     nav {
         display: block;
         /* So it is visable again */
@@ -142,4 +142,19 @@ footer {
     .nav-toggle-label {
         display: none;
     }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        /* this gives it more space at the top --- ? --- why has this been used and not margin-top? */
+        margin: 0 0.5rem;
+    }
+
+    /* ---------- Main content ---------- */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+        /* Header only took up 78.59px so how come there is no gap -----???---- */
+    }
+
 }
