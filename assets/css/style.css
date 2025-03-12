@@ -104,6 +104,7 @@ main {
     flex: 1 0 auto;
     /* this will make the main element take up any surplus space, and push footer down. 
     It should not shrink when the screen is too small to show all the content. */
+    margin-top: 48px;
 }
 
 
