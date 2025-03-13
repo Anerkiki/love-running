@@ -71,7 +71,9 @@ h1 {
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    /* takes an element out of the normal flow of the page structure, it is positioned relative to the nearest positioned ancestor, in this case the header */
+    /* takes an element out of the normal flow of the page structure, 
+    it is positioned relative to the nearest positioned ancestor, 
+    in this case the header */
     background-color: #ffffff;
     width: 100%;
     left: 0;
