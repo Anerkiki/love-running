@@ -279,3 +279,32 @@ main {
         border-bottom: 1px solid #3a3a3a;
     }
 }
+
+/* Media query: Large laptops and larger (1200px and up) */
+@media screen and (min-width: 1200px) {    
+    /* Reasons section */
+    #benefits {
+        display: flex;
+        flex-direction: row;   /* Not neccessary as line above makes it into rows? */
+    }
+
+    #benefits > div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0
+    }   /* Not necessary as it was already 0 before and in the right order? */
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental > div {
+        align-self: flex-start;
+    }   /* not necessary as these are already in place from parent styles? */
+
+    #benefits-physical > div {
+        align-self: flex-end;
+    }    /* not necessary as these are already in place from parent styles? */
+}
