@@ -163,6 +163,22 @@ main {
     margin: 5px 0;
 }
 
+#circle-cover-bg {
+    background: url("../images/reasons-image.webp") top center / cover no-repeat;
+    height: 90vh;
+    width: 90vw;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    /* m kes the square image into a circle */
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#benefits-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
