@@ -22,6 +22,15 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
+
+
 
 
 /* ---------- Header ---------- */
@@ -44,13 +53,6 @@ header a {
     /* removes default underline styling and blue colour of each of the links */
     color: inherit;
     /* sets the text colour to inherit from the body, changes default link colour */
-}
-
-h1 {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #252525;
 }
 
 #menu {
@@ -102,7 +104,6 @@ nav {
 
 
 
-
 /* ---------- Main content ---------- */
 main {
     
@@ -117,8 +118,24 @@ main {
     height: 600px;
     width: 100%;
     background: url("../images/hero-image.webp") no-repeat center center/cover;
+    position: relative;
 }
 
+#cover-text {
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 40px;
+    padding-left: 10px;
+}
+
+#cover-text > h2, #cover-text> h3 {
+    /* This is targetting any h2 or h3 that is a direct child of the cover-text div */
+    color: #ffffff;
+}
 
 
 
@@ -139,6 +156,8 @@ main {
     padding: 5%;
     color: #3a3a3a;
 }
+
+
 
 
 
@@ -185,6 +204,11 @@ main {
         /* Header only took up 78.59px so how come there is no gap -----???---- */
     }
 
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
 }
 
 /* Media query: Small laptops and larger (992px and up) */
