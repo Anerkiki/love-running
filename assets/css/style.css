@@ -17,6 +17,7 @@ body {
     flex-direction: column;
     /* We'll also want to set the display to flex and the flex-direction to 
     column, so our elements will still show underneath each other. */
+
     /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
@@ -44,6 +45,7 @@ header {
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
+    /* QUESTION ----------------------------------------- Does it need this as this has already been set in body? See main & media query #menu Questions */
     justify-content: space-between;
     align-items: baseline;
 }
@@ -57,7 +59,6 @@ header a {
 
 #menu {
     font-size: 110%;
-    /* font-size: 1.1rem;  ------ would this be the same? */
     list-style-type: none;
     letter-spacing: 4px;
 }
@@ -106,10 +107,9 @@ nav {
 
 /* ---------- Main content ---------- */
 main {
-    
     flex: 1 0 auto;
-    /* this will make the main element take up any surplus space, and push footer down. 
-    It should not shrink when the screen is too small to show all the content. */
+    /* grow shrink width; - this will make the main element take up any surplus space, and push footer down. It should not shrink when the screen is too small to show all the content. */
+    /* QUESTION ----------------------------------------- Does this work without display: flex; as this has already been set in body and is inherited? See header & media query #menu Questions */
     margin-top: 48px;
 }
 
@@ -135,6 +135,32 @@ main {
 #cover-text > h2, #cover-text> h3 {
     /* This is targetting any h2 or h3 that is a direct child of the cover-text div */
     color: #ffffff;
+}
+
+/* Reasons Section */
+#reasons {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#reasons h2 {
+    font-size: 280%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#benefits-physical > div, #benefits-mental > div {
+    line-height: 20px;
+    margin: 20px;
+}
+
+#benefits p {
+    padding: 0 20px;
+}
+
+#benefits hr {
+    border-top: 1px solid #3a3a3a;
+    margin: 5px 0;
 }
 
 
@@ -163,7 +189,7 @@ main {
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-    /* ---------- Header ---------- */
+    /* Header */
     nav {
         display: block;
         /* So it is visable again */
@@ -171,8 +197,7 @@ main {
         /* To put nav back inside the header */
         box-shadow: none;
         width: fit-content;
-        /* now it no longer takes up all of the space in the header, allowing 
-        our flex styles from earlier to push it to the right (space between) */
+        /* now it no longer takes up all of the space in the header, allowing the flex styles from earlier to push it to the right (space between) */
         padding-right: 1rem;
         /* So menu items don't stick to screen */
     }
@@ -180,6 +205,7 @@ main {
     #menu {
         display: flex;
         /* So that the menu items show in a row rather than column */
+        /* QUESTION ----------------------------------------- display: flex; has already been set in the body and the direction was changed to column, so how come this is making it row again as it already has display: flex; applied if inherited, or does adding display: flex; set it all to default again even if it has already been set? See header and main Questions */
     }
 
     #menu > li {
@@ -193,15 +219,16 @@ main {
     #logo {
         font-size: 280%;
         line-height: 75px;
-        /* this gives it more space at the top --- ? --- why has this been used and not margin-top? */
+        /* QUESTION ------------ this gives it more space at the top of the text, but why has this been used and not margin-top? */
         margin: 0 0.5rem;
     }
 
-    /* ---------- Main content ---------- */
+    /* Main content */
     main {
         /* Push main content down to accommodate larger header */
         margin-top: 79px;
-        /* Header only took up 78.59px so how come there is no gap -----???---- */
+        /* QUESTION -------------------------------- Header only took up 78.59px so how come there is no gap, or is it too small to see, as would only be 0.41px? Should this not be changed to 78.59px or should it be an integer? 
+        QUESTION ------------------------------- Is there not a  better way to set this so that even if the height of the header is changed it will adjust itself automatically? */
     }
 
     /* Hero */
@@ -213,7 +240,7 @@ main {
 
 /* Media query: Small laptops and larger (992px and up) */
 @media screen and (min-width: 992px) {
-    /* ---------- Header ---------- */
+    /* Header */
     #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
