@@ -30,6 +30,11 @@ h1, h2, h3 {
     color: #252525;
 }
 
+.hidden-heading {
+    display: none;
+    /* so that the heading still exists for SEO */
+}
+
 
 
 
